@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio - BS</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+<body>
+<header>
+  <div class="logo-texto" style="display: flex; align-items: center; gap: 12px;">
+    <div class="logo" style="font-size: 28px; font-weight: bold;">BS</div>
+    <div class="tech-icons" style="display: flex; gap: 8px; font-size: 24px;">
+      <i class="devicon-html5-plain colored" title="HTML5"></i>
+      <i class="devicon-css3-plain colored" title="CSS3"></i>
+      <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+      <i class="devicon-mysql-plain colored" title="MySQL"></i>
+      <i class="devicon-c-plain colored" title="C#"></i>
+      <i class="devicon-python-plain colored" title="Python"></i>
+      <i class="devicon-java-plain colored" title="Java"></i>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#hero" class="smooth-scroll">Início</a></li>
+      <li><a href="#about" class="smooth-scroll">Sobre Mim</a></li>
+      <li><a href="#skills" class="smooth-scroll">Habilidades</a></li>
+      <li><a href="#resume" class="smooth-scroll">Currículo</a></li>
+      <li><a href="#contact" class="smooth-scroll">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="hero">
+  <h1>Olá, Seja Bem-Vindo!</h1>
+  <p>Aqui você encontra algumas informações sobre mim.</p>
+</section>
+
+<section id="about">
+  <h2>Quem sou eu?</h2>
+  <div class="about-content">
+    <img src="assets/bs2.jpeg" alt="Foto de Bianca Sobral" />
+    <p>
+      Bianca Sobral, estudante de Análise e Desenvolvimento de Sistemas, desenvolvedora Front-End em andamento, apaixonada por tecnologia e desenvolvimento web. Estou sempre em busca de aprender novas habilidades e aprimorar as que já possuo. Atualmente, estou focada em me tornar uma desenvolvedora Front-End competente, com conhecimentos em HTML, CSS, JavaScript e outras tecnologias.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Hard Skills</h2>
+  <ul class="skills-list">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>Java</li>
+    <li>Python</li>
+    <li>C#</li>
+    <li>MySQL</li>
+    <li>Git</li>
+    <li>GitHub</li>
+    <li>Office 365</li>
+  </ul>
+</section>
+
+<section id="soft-skills">
+  <h2>Soft Skills</h2>
+  <ul class="skills-list">
+    <li>Comunicação</li>
+    <li>Trabalho em equipe</li>
+    <li>Dedicação</li>
+    <li>Metodologia Ágil</li>
+    <li>Organização</li>
+    <li>Resolução de Problemas</li>
+    <li>Criatividade</li>
+
+  </ul>
+</section>
+
+<section id="resume">
+  <h2>Currículo</h2>
+  <p>Quer conhecer meu currículo completo? Clique no botão abaixo para baixar.</p>
+  <a href="assets/cv.bsobral.pdf" class="btn" download>Baixar Currículo</a>
+</section>
+
+<section id="contact">
+  <h2>Entre em Contato :)</h2>
+<form id="contact-form" action="https://getform.io/f/bnlxdgxb" method="POST" enctype="multipart/form-data" novalidate>
+  <input type="hidden" name="_redirect" value="https://thebiancascript.github.io/meu-portfolio/thanks.html" />
+  <input type="text" name="name" placeholder="seu nome:" required />
+  <input type="email" name="email" placeholder="seu e-mail:" required />
+  <textarea name="message" placeholder="deixe aqui sua mensagem." rows="5" required></textarea>
+  <button type="submit">Enviar</button>
+</form>
+
+</section>
+
+<div class="social-icons" aria-label="Redes sociais">
+  <a href="https://github.com/thebiancascript" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="icon-link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+      <path
+        d="M12 1C5.925 1 1 5.925 1 12c0 4.864 3.145 8.998 7.512 10.451.55.101.75-.238.75-.53v-1.87c-3.05.665-3.69-1.47-3.69-1.47-.5-1.29-1.222-1.635-1.222-1.635-.999-.683.076-.67.076-.67 1.104.077 1.683 1.136 1.683 1.136.982 1.682 2.58 1.195 3.21.913.101-.711.384-1.194.698-1.47-2.43-.275-4.988-1.214-4.988-5.4 0-1.193.426-2.168 1.128-2.932-.112-.276-.49-1.387.107-2.89 0 0 .916-.29 3 .82.87-.243 1.8-.365 2.726-.37.926.005 1.856.127 2.726.37 2.083-1.11 3-.82 3-.82.598 1.503.22 2.615.108 2.89.702.764 1.127 1.74 1.127 2.932 0 4.195-2.56 5.12-5 5.395.394.343.745 1.02.745 2.06v3.054c0 .294.2.637.75.53C19.855 20.997 23 16.86 23 12c0-6.075-4.925-11-11-11z">
+      </path>
+    </svg>
+  </a>
+
+  <a href="https://www.linkedin.com/in/bsobral0327/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="icon-link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path>
+      <rect x="2" y="9" width="4" height="12"></rect>
+      <circle cx="4" cy="4" r="2"></circle>
+    </svg>
+  </a>
+
+  <a href="https://instagram.com/dearstime" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="icon-link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+    </svg>
+  </a>
+</div>
+
+
+<footer>
+  <p>© 2025, BS. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Script oficial Getform -->
+<script src="https://getform.io/lib/v1/getform.js"></script>
+<script>
+  Getform.init("#contact-form", {
+    formId: "bnlxdgxb"
+  });
+</script>
+
+</body>
+</html>
