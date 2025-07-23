@@ -578,7 +578,7 @@ nav {
     display: block;  /* Exibe o botão no mobile */
     position: absolute;
     top: 50%;
-    right: 14rem;  /* Posiciona ao lado da logo */
+    right: 10rem;  /* Posiciona ao lado da logo */
     transform: translateY(-50%); /* Alinha verticalmente */
     z-index: 1100;
     cursor: pointer;
