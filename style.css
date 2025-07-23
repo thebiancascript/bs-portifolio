@@ -578,13 +578,13 @@ nav {
     display: block;  /* Exibe o botão no mobile */
     position: absolute;
     top: 50%;
-    right: 1rem;  /* Posiciona ao lado da logo */
+    right: 8rem;  /* Posiciona ao lado da logo */
     transform: translateY(-50%); /* Alinha verticalmente */
     z-index: 1100;
     cursor: pointer;
     background: transparent;
     border: none;
-    font-size: 2.5rem;
+    font-size: 1rem;
     color: white;
   }
 
