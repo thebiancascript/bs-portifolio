@@ -42,22 +42,22 @@ header {
 }
 
 .logo {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: bold;
-  color: #7002ff;
+  color: #750bff;
   user-select: none;
-  line-height: 1;
+  line-height:1;
 }
 
 .tech-icons {
   display: flex;
   align-items: center;
   gap: 0.7rem;
-  margin-top: 2px;
+  margin-top: 0px;
 }
 
 .tech-icons i {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   transition: transform 0.3s;
   cursor: default;
   line-height: 1;
