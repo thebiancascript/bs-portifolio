@@ -559,31 +559,42 @@ footer {
 
 /* Para telas pequenas: esconder a nav e mostrar o menu hambúrguer que abre o menu vertical */
 @media (max-width: 768px) {
+  /* Exibe o botão de menu (hambúrguer) */
   .menu-toggle {
     display: block;
+    position: fixed; /* fixo para ficar sempre visível */
     top: 1rem;
     right: 1rem;
     transform: none;
+    z-index: 1100; /* acima do menu */
+    cursor: pointer;
   }
 
+  /* Menu lateral escondido inicialmente */
   #menu {
-    position: absolute;
-    top: 3.5rem;
-    right: 0;
+    position: fixed; /* fixo na tela */
+    top: 0;
+    right: -250px; /* fora da tela à direita */
+    height: 100vh;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.9);
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    display: none;
+    padding-top: 4rem; /* distância para não ficar atrás do menu-toggle */
+    display: flex; /* mantem flex para alinhamento */
+    transition: right 0.3s ease;
+    z-index: 1050;
   }
 
+  /* Menu lateral ativo, desliza para dentro */
   #menu.active {
-    display: flex;
+    right: 0;
   }
 
+  /* Lista do menu em coluna */
   #menu ul {
     flex-direction: column;
     gap: 1.5rem;
-    padding: 1.5rem 0;
+    padding: 1.5rem 2rem;
     max-width: none;
   }
 }
