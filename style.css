@@ -1,4 +1,4 @@
-/* Reset e base */
+/* * Reset e base */ */
 * {
   margin: 0;
   padding: 0;
@@ -438,6 +438,8 @@ footer {
   text-align: center;    /* mantém alinhado no centro */
 }
 
+
+
 @media (max-width: 768px) {
   /* Adiciona espaço suficiente acima da primeira seção */
   #hero {
@@ -463,7 +465,7 @@ footer {
     padding: 0;
   }
 
-  tech-icons {
+  .tech-icons {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem;
@@ -507,31 +509,53 @@ footer {
 
 /* Estilo do botão menu hambúrguer */
 .menu-toggle {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 1rem;
-  transform: translateY(-50%);
-  z-index: 1010;
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 2.5rem;
-  padding: 0.25rem 0.5rem;
-  cursor: pointer;
-  line-height: 1;
-  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+  display: none; /* esconde no desktop */
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* mostra no mobile */
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1100;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 2.5rem;
+    color: white;
+    margin-top: 0.5rem; /* Evita sobreposição */
+  }
+
+  #menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.9);
+    padding-top: 4rem;
+    transition: right 0.3s ease;
+    z-index: 1050;
+  }
+
+  #menu.active {
+    right: 0;
+  }
+
+  #menu ul {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    list-style: none;
+  }
 }
 
 /* Nav padrão: links lado a lado */
 #menu {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: auto;
-  background: transparent;
-  margin: 0;
-  padding: 0;
+  display: none;
 }
 
 #menu ul {
@@ -555,46 +579,4 @@ footer {
 
 #menu ul li a:hover {
   color: #f0a500;
-}
-
-/* Para telas pequenas: esconder a nav e mostrar o menu hambúrguer que abre o menu vertical */
-@media (max-width: 768px) {
-  /* Exibe o botão de menu (hambúrguer) */
-  .menu-toggle {
-    display: block;
-    position: fixed; /* fixo para ficar sempre visível */
-    top: 1rem;
-    right: 1rem;
-    transform: none;
-    z-index: 1100; /* acima do menu */
-    cursor: pointer;
-  }
-
-  /* Menu lateral escondido inicialmente */
-  #menu {
-    position: fixed; /* fixo na tela */
-    top: 0;
-    right: -250px; /* fora da tela à direita */
-    height: 100vh;
-    width: 250px;
-    background: rgba(0, 0, 0, 0.9);
-    flex-direction: column;
-    padding-top: 4rem; /* distância para não ficar atrás do menu-toggle */
-    display: flex; /* mantem flex para alinhamento */
-    transition: right 0.3s ease;
-    z-index: 1050;
-  }
-
-  /* Menu lateral ativo, desliza para dentro */
-  #menu.active {
-    right: 0;
-  }
-
-  /* Lista do menu em coluna */
-  #menu ul {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1.5rem 2rem;
-    max-width: none;
-  }
 }
